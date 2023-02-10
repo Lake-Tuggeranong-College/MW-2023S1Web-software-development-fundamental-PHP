@@ -1,5 +1,5 @@
 <?php
-
+//timezone stuff
 function footer():string
 {
     date_default_timezone_set('Australia/Canberra');
@@ -7,7 +7,7 @@ function footer():string
     $footer = "This page was last modified: " . date("F d Y H:i:s.", filemtime($filename));
     return $footer;
 }
-
+//sanatise data
 function sanatiseData($unsanatisedData):string {
     $unsanitisedData = trim($unsanitisedData);
     $unsanitisedData = stripslashes($unsanitisedData);
