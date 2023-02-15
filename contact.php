@@ -26,6 +26,7 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $formError = false;
     $emailAddress = $_POST['inputEmail'];
     $messageSubmitted = $_POST['inputMessage'];
     echo $emailAddress;
