@@ -27,11 +27,21 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $formError = false;
-    $emailAddress = $_POST['inputEmail'];
-    $messageSubmitted = $_POST['inputMessage'];
-    echo $emailAddress;
-    echo "<p>";
-    echo $messageSubmitted;
+    if (empty($_POST['inputEmail'])){
+        $formError = true;
+        echo "Enter an email address";
+    }
+    if (empty($_POST['inputMessage'])) {
+        $formError = true;
+        echo "Enter a message to submit";
+    }
+    if ($formError == false) {
+        $emailAddress = $_POST['inputEmail'];
+        $messageSubmitted = $_POST['inputMessage'];
+        echo $emailAddress;
+        echo "<p>";
+        echo $messageSubmitted;
+    }
 }
 ?>
 
