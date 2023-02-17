@@ -38,9 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($formError == false) {
         $emailAddress = $_POST['inputEmail'];
         $messageSubmitted = $_POST['inputMessage'];
-        echo $emailAddress;
-        echo "<p>";
-        echo $messageSubmitted;
+
+        $csvFile = fopen("contact.csv", "a");
+        fwrite($csvFile, $emailAddress. ",". $messageSubmitted."\n");
+        fclose($csvFile);
     }
 }
 ?>
