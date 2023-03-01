@@ -36,7 +36,7 @@ function footer():string
     return $footer;
 }
 //sanatise data
-function sanatiseData($unsanatisedData):string {
+function sanitiseData($unsanitisedData):string {
     $unsanitisedData = trim($unsanitisedData);
     $unsanitisedData = stripslashes($unsanitisedData);
     $sanitisedData = htmlspecialchars($unsanitisedData);
