@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<nav class="navbar navbar-expand-sm bg-info">
+<nav class="navbar navbar-expand-sm bg-danger">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="https://www.looper.com/img/gallery/the-other-back-to-the-future-reference-you-missed-in-rick-and-morty/l-intro-1618319353.jpg" height="100px"</a>
+        <a class="navbar-brand" href="#"><img src="https://media.giphy.com/media/7Jq6ufAgpblcm0Ih2z/giphy.gif" height="100px"</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,10 @@
                     <a class="nav-link" href="contact.php">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="invoicelist.php">Invoice</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="orderForm.php">Order Form</a>
                 </li>
             </ul>
         </div>
@@ -42,3 +45,8 @@ function sanitiseData($unsanitisedData):string {
     $sanitisedData = htmlspecialchars($unsanitisedData);
     return $sanitisedData;
 }
+
+
+
+
+https://www.looper.com/img/gallery/the-other-back-to-the-future-reference-you-missed-in-rick-and-morty/l-intro-1618319353.jpg
