@@ -1,4 +1,7 @@
-<?php include "template.php" ?>
+<?php include "template.php"
+/** @var $productNames */
+/** @var $productPrices */
+?>
 <title>Invoice</title>
 <body>
 

@@ -7,7 +7,7 @@
 </head>
 <nav class="navbar navbar-expand-sm bg-danger">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="https://media.giphy.com/media/7Jq6ufAgpblcm0Ih2z/giphy.gif" height="100px"</a>
+        <a class="navbar-brand" href="#"><img src="https://media.giphy.com/media/dqC7qh15XHPsy4Ffdr/giphy.gif" height="100px"</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,6 +31,8 @@
 </nav>
 <?php
 //timezone stuff
+$productNames = array("product1"=>"Darth Vader Helmet", "product2"=>"Grogu Plush", "product3"=>"ROTJ Jigsaw", "product4"=>"Aftermath", "product5"=>"Alphabet Squadron");
+$productPrices= array("product1"=>299.0, "product2"=>32.95, "product3"=>219.95, "product4"=>24.95, "product5"=>24.95);
 function footer():string
 {
     date_default_timezone_set('Australia/Canberra');
