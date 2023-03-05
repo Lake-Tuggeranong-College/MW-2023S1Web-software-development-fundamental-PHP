@@ -17,7 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.php">Contact Us</a>
+                    <a class="nav-link" href="contact.php">Contact us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="invoicelist.php">Invoice</a>
