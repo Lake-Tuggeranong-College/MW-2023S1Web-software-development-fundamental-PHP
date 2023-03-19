@@ -32,9 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailAddress = $_POST['inputEmail'];
         $messageSubmitted = $_POST['inputMessage'];
 
-        $csvFile = fopen("contact.csv", "a");
-        fwrite($csvFile, $emailAddress. ",". $messageSubmitted."\n");
-        fclose($csvFile);
+        $SQLStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, ContactMessage) VALUES (:ContactEmail, :ContactMessage)");
+
+      //  $csvFile = fopen("contact.csv", "a");
+       // fwrite($csvFile, $emailAddress. ",". $messageSubmitted."\n");
+      //  fclose($csvFile);
     }
 }
 ?>
