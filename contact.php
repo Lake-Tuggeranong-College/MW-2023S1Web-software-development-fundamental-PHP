@@ -1,4 +1,6 @@
-<?php include "template.php"?>
+<?php include "template.php";
+/** @var $conn */
+?>
     <title>Contact Us</title>
 <body>
 <h1>Contact Us</h1>
@@ -33,12 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $messageSubmitted = $_POST['inputMessage'];
 
         $SQLStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, ContactMessage) VALUES (:ContactEmail, :ContactMessage)");
+$SQLStmt->bindParam(':ContactEmail, $ContactEmail');
+$SQLStmt->bindParam(':ContactMessage, $ContactMessage');
+$SQLStmt->execute();
 
+        }
       //  $csvFile = fopen("contact.csv", "a");
        // fwrite($csvFile, $emailAddress. ",". $messageSubmitted."\n");
       //  fclose($csvFile);
     }
-}
 ?>
 
 ?>
