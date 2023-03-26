@@ -34,10 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailAddress = $_POST['inputEmail'];
         $messageSubmitted = $_POST['inputMessage'];
 
-        $SQLStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, ContactMessage) VALUES (:ContactEmail, :ContactMessage)");
-$SQLStmt->bindParam(':ContactEmail, $ContactEmail');
-$SQLStmt->bindParam(':ContactMessage, $ContactMessage');
-$SQLStmt->execute();
+        $SQLStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, ContactMessage) VALUES (:email, :message)");
+        $SQLStmt->bindParam(':email', $ContactEmail);
+        $SQLStmt->bindParam(':message', $ContactMessage);
+        $SQLStmt->execute();
 
         }
       //  $csvFile = fopen("contact.csv", "a");

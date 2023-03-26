@@ -4,7 +4,7 @@
 
 <?php
 // Read the contents of the file
-$currentRow = 1;
+/*$currentRow = 1;
 if (($handle = fopen("orders.csv", "r")) !== FALSE) {
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 // Customer Details
@@ -16,5 +16,6 @@ if (($handle = fopen("orders.csv", "r")) !== FALSE) {
     fclose($handle); //closes the file
 
 }
+*/
 ?>
 
