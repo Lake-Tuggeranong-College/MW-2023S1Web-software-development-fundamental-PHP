@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="orderForm.php">Order Form</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="register.php">Register</a>
+                </li>
             </ul>
         </div>
     </div>

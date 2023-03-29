@@ -94,12 +94,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $orderNumber = "1"; //to do: Fix to generate new one
             $customerID = "1"; //to do: Fix to load current customer id
         $productID = 5; //to do: Load dynamically
-        $SQLStmt = $conn->prepare( "INSERT INTO Orders (OrderNumber, CustomerID, ProductID, ProductQuantity) VALUES (:OrderNumber, :CustomerID, :ProductID, :ProductQuantity)");
-        SQLStmt->bindParam( ':OrderNumber', $orderNumber);
+        $SQLStmt = $conn->prepare( "INSERT INTO Orders (OrderNumber, CustomerID, ProductID, ProductQuantity) VALUES (:OrderNumber, :CustomerID, :ProductID, :ProductQuantity)");SQLStmt->bindParam( ':OrderNumber', $orderNumber);
 SQLStmt->bindParam( ':CustomerID', $customerID );
 SQLStmt->bindParam( ':ProductID',  $productID);
-        SQLStmt->bindParam('ProductQuantity', $prodQuantity5);
-    SQLStmt->execute();
+SQLStmt->bindParam('ProductQuantity', $prodQuantity5);
+SQLStmt->execute();
     }
 }
 

@@ -34,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $emailAddress = $_POST['inputEmail'];
         $messageSubmitted = $_POST['inputMessage'];
 
-        $SQLStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, ContactMessage) VALUES (:email, :message)");
-        $SQLStmt->bindParam(':email', $ContactEmail);
-        $SQLStmt->bindParam(':message', $ContactMessage);
+        $SQLStmt = $conn->prepare("INSERT INTO Contact (Email, Message) VALUES (:Email, :Message)");
+        $SQLStmt->bindParam(':Email', $ContactEmail);
+        $SQLStmt->bindParam(':Message', $ContactMessage);
         $SQLStmt->execute();
 
         }
