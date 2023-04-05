@@ -6,20 +6,20 @@ Users will be able to log in, log out,reset their passwords, and edit their deta
 
 Users will need to store
 
-- name
+- Name
 - DOB
 - Hashed password
-- Access Level (user vs Administrator)
+- Access Level (User vs Administrator)
 - Status (active or disabled)
 ## Product Management
 Administrators will be able to add, remove, or edit products.
 
-products will have
+Products will have
 
 - A Name
 - A Price
 - A Description
--  Quantity
+- Quantity
 
 # Behaviour - User Journey
 
