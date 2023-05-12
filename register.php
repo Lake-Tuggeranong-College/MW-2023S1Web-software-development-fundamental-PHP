@@ -12,7 +12,8 @@
             <div class="col-md-6">
                 <h2>Account Details</h2>
                 <p>Please enter wanted username and password:</p>
-                <p>Email Address<input type="text" name="username" class="form-control" required="required"></p>
+                <p>Email Address<input type="text" name="username" class="form-control" required="required">
+                </p>
                 <p>Password<input type="password" name="password" class="form-control" required="required"></p>
 
             </div>
@@ -22,7 +23,7 @@
                 <p>Please enter More Personal Details:</p>
                 <p>First Name<input type="text" name="FirstName" class="form-control" required="required"></p>
                 <p>Second Name<input type="text" name="SecondName" class="form-control" required="required"></p>
-                <p>Address<input type="text" name="Adress" class="form-control" required="required"></p>
+                <p>Address<input type="text" name="Address" class="form-control" required="required"></p>
                 <p>Phone Number<input type="text" name="PhoneNumber" class="form-control" required="required"></p>
             </div>
         </div>
@@ -37,11 +38,11 @@ IF ($_SERVER["REQUEST_METHOD"] == "POST") { //will return true when user presses
     $password = sanitiseData($_POST['password']);
     $FirstName = sanitiseData($_POST['FirstName']);
     $SecondName = sanitiseData($_POST['SecondName']);
-    $Address = sanitiseData($_POST['address']);
+    $Address = sanitiseData($_POST['Address']);
     $PhoneNumber = sanitiseData($_POST['PhoneNumber']);
 
     //check if the username already exists in the database
-    $query = $conn->query("SELECT COUNT(*) FROM customers WHERE EmailAdress= $username");
+    $query = $conn->query("SELECT COUNT(*) FROM customers WHERE EmailAddress= '$username'");
     $data = $query->fetchArray();
     $numberOfUsers = (int)$data[0];
 
@@ -51,8 +52,8 @@ IF ($_SERVER["REQUEST_METHOD"] == "POST") { //will return true when user presses
         //the username enter is unique (doesn't already exist in database)
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $SQLStmt = $conn->prepare("INSERT INTO customers (EmailAdress, hashedPassword, FirstName, SecondName, Adress, PhoneNumber) VALUES (:EmailAdress, :hashedPassword, :FirstName, :SecondName, :Adress, :PhoneNumber)");
-        $SQLStmt->bindParam(':EmailAdress', $username);
+        $SQLStmt = $conn->prepare("INSERT INTO customers (EmailAddress, HashedPassword, FirstName, SecondName, Address, PhoneNumber) VALUES (:EmailAddress, :hashedPassword, :FirstName, :SecondName, :Address, :PhoneNumber)");
+        $SQLStmt->bindParam(':EmailAddress', $username);
         $SQLStmt->bindParam(':hashedPassword', $hashedPassword);
         $SQLStmt->bindParam(':FirstName', $FirstName);
         $SQLStmt->bindParam(':SecondName', $SecondName);
