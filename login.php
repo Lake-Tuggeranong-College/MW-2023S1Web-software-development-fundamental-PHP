@@ -13,6 +13,7 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $row['HashedPassword'])) {
             $_SESSION["FirstName"] = $row['FirstName'];
             $_SESSION['EmailAddress'] = $row['EmailAddress'];
+            $_SESSION['AccessLevel'] = $row['AccessLevel'];
             header("location:index.php");
         } else {
             echo "<div class='alert alert-danger'>Invalid username or password</div>";
