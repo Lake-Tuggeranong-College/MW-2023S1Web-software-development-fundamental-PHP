@@ -122,5 +122,4 @@ SQLStmt->bindParam( ':ProductID', &var "?")
 
 <?php echo footer() ?>
 </body>
-<script src="js/bootstrap.bundle.min.js"></script>
 </html>
